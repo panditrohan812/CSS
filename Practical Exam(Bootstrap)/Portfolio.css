@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #e8280b;
+  --gold: #e6a817;
+  --dark: #1a1a1a;
+  --text-gray: #555;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.navbar {
+  padding: 18px 40px;
+  background: #fff;
+}
+.navbar-brand {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--dark) !important;
+  letter-spacing: -0.5px;
+}
+.navbar-nav .nav-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--dark) !important;
+  padding: 0 14px !important;
+  transition: color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--red) !important;
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.hero {
+  min-height: calc(100vh - 74px);
+  padding: 20px 40px 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+.hero-text .greeting {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+.hero-text h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.hero-text .divider {
+  width: 70px;
+  height: 3px;
+  background: var(--red);
+  margin-bottom: 14px;
+}
+.hero-text .subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-text .description {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  max-width: 460px;
+  margin-bottom: 32px;
+}
+.btn-contact {
+  background: var(--red);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-contact:hover {
+  background: #c41f08;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-image-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1199.98px) {
+  .photo-frame-container {
+    width: 380px;
+    height: 390px;
+  }
+  .photo-circle {
+    width: 260px;
+    height: 260px;
+  }
+  .arch-black {
+    width: 284px;
+    height: 284px;
+    border-width: 13px;
+  }
+  .arch-red {
+    width: 260px;
+    height: 260px;
+    border-width: 12px;
+  }
+  .red-rect-frame {
+    left: 105px;
+    border-width: 19px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 30px 30px 50px;
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero-text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hero-text .description {
+    margin: 0 auto 28px;
+  }
+  .hero-text .divider {
+    margin: 0 auto 14px;
+  }
+  .corner-shape-top,
+  .corner-shape-bottom {
+    display: none;
+  }
+  .photo-frame-container {
+    width: 380px;
+    height: 390px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    padding: 14px 24px;
+  }
+  .hero {
+    padding: 20px 20px 40px;
+  }
+  .photo-frame-container {
+    width: 320px;
+    height: 330px;
+  }
+  .photo-circle {
+    width: 220px;
+    height: 220px;
+  }
+  .arch-black {
+    width: 240px;
+    height: 240px;
+    border-width: 12px;
+  }
+  .arch-red {
+    width: 220px;
+    height: 220px;
+    border-width: 11px;
+  }
+  .red-rect-frame {
+    left: 88px;
+    border-width: 17px;
+    top: 24px;
+    bottom: 24px;
+  }
+  .dots-grid {
+    width: 68px;
+    height: 80px;
+    background-size: 13px 13px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .photo-frame-container {
+    width: 270px;
+    height: 285px;
+  }
+  .photo-circle {
+    width: 185px;
+    height: 185px;
+    border-width: 5px;
+    left: 43%;
+  }
+  .arch-black {
+    width: 202px;
+    height: 202px;
+    border-width: 10px;
+    left: 43%;
+  }
+  .arch-red {
+    width: 185px;
+    height: 185px;
+    border-width: 9px;
+    left: 43%;
+  }
+  .red-rect-frame {
+    left: 72px;
+    border-width: 14px;
+    top: 18px;
+    bottom: 18px;
+  }
+  .dots-grid {
+    width: 54px;
+    height: 64px;
+    background-size: 11px 11px;
+  }
+  .side-bar-left,
+  .side-bar-right {
+    width: 8px;
+  }
+}
